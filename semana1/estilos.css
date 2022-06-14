@@ -1,0 +1,27 @@
+h1 {
+    color:gray;
+    text-decoration: underline;
+    text-align: center;
+}
+
+h2{
+    color:blue;
+}
+
+p{
+    color:pink;
+}
+
+.parrafos_rojos{
+    color:red;
+    font-weight: 600;
+}
+
+tr{
+    text-align: center;
+}
+
+th{
+    background-color: purple;
+    color:white;
+}
