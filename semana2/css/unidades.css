@@ -1,3 +1,10 @@
+/* ! El font-size de un navegador es por default 16px. 16px = 1em */
+/* ! Puede cambiar si es que alteramos el font-size del body */
+/* !body {font-size: 18px;} -> 1em = 18px */
+
+/* ! El rem se basa en el font-size del html que es nuestro root. 16px = 1rem */
+/* ! html {font-size: 20px;} -> 1rem = 20px */
+
 html{
     font-size: 20px;
 }

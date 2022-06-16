@@ -1,0 +1,39 @@
+body{
+    font-family: "Cookie";
+}
+
+.bg{
+    border-style: solid;
+    height: 100px;
+    
+}
+
+.color-red{
+    background-color: red;
+}
+
+.color-green{
+    background-color: green;
+}
+
+.bg-img{
+    background: url("../../semana1/images/macbook-pro.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bg-img-fb{
+    background: url("../../semana1/images/facebook_logo.png");
+    height: 300px;
+    /* *Ocupa todo el espacio de su div */
+    background-size: cover;
+    /* *La imagen se enfoca en el centro */
+    background-position: center;
+    /* *Evita repetir más de una vez la imagen */
+    background-repeat: no-repeat;
+}
+
+@font-face {
+    font-family: "Cookie";
+    src: url(../fonts/Cookie-Regular.ttf);
+}

@@ -1,0 +1,73 @@
+.bg-box{
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    /* para mover este elmento por todo el navegador */
+    position: relative;
+    /* al agregar un position a un elmento, este nos da la opcion de usar lo siguiente: top left right bottom */
+    /* Lo movío al elemento 100px a la izquierda */
+    /* left: 100px; */
+    /* top: 100px;
+    right: 100px; */
+    
+}
+
+/* Esta es la opcion de combinar absoluye con relative */
+/* Absolute necesita de un padre que defina su entorno, es decir, ancho y alto */
+/* Por ende, relative va a funcionar como padre de absolute */
+
+/* ! El hijo se mueve dentro del padre */
+/* ! El hijo al no tener un relative, va a tomar al body como padre, no importa si esta dentro de un div al activar el position:absolute. Automaticamente va a buscar al primer relative que encuentro si no lo hace toma al body */
+
+.padre{
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    position: relative;
+}
+
+.hijo{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    /* right: 0;
+    bottom: 0; */
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    
+}
+
+/* * vh significa que ocupa todo el ancho de la pantalla */
+/* * 100vh equivale al alto de la pantalla. Solo hace referencia a la parte vertical */
+.padre-bandera{
+    height: 100vh;
+    border: solid;
+    position: relative;
+}
+
+.hijo-1{
+    background-color: green;
+    height: 100vh;
+    width: 40%;
+    float: left;
+}
+.hijo-2{
+    background-color: red;
+    height: 100vh;
+    width: 60%;
+    float: right;
+}
+.hijo-3{
+    background: url(../images/escudo-portugal.png);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* *Se resta el 50% de lo que mide el div padre, con la mitad del escucho (100px) */
+    top: calc(50% - 100px);
+    /* *Se resta el 40% que representa el verde, con la mitad del escudo que mide 100px (200px/2) */
+    left: calc(40% - 100px);
+}
