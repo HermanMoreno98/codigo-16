@@ -1,0 +1,115 @@
+body{
+    background-color: rgb(190, 190, 190);
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+}
+
+h2{
+    border: 1px black solid;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h2:hover{
+    text-decoration: underline;
+}
+
+#contenedor{
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(to right,red 33%, #fff 34%,#fff 66%, red 67%);
+    margin:auto;
+    position: relative;
+}
+
+#contenedor:hover{
+    background: linear-gradient(to top,red 33%, #fff 34%,#fff 66%, red 67%);
+    box-shadow: none;
+}
+
+#circulo{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(132, 137, 137);
+    margin: 60px auto 0 ;
+    /* border-radius: 20px; */
+    border-top-left-radius: 200px;
+    position: relative;
+}
+
+#circulo2{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(1, 11, 1);
+    margin: 0 auto;
+    /* border-radius: 20px; */
+    border-bottom-left-radius: 200px;
+    position: relative;
+}
+#circulo3{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(238, 161, 238);
+    margin: auto;
+    /* border-radius: 20px; */
+    border-top-right-radius: 200px;
+    position: absolute;
+    left: 200px;
+}
+#circulo4{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(239, 244, 244);
+    margin: auto;
+    /* border-radius: 20px; */
+    border-bottom-right-radius: 200px;
+    position: absolute;
+    left: 200px;
+}
+
+#bandera-circulo{
+    border-radius: 100px;
+    background: radial-gradient(red, #fff , red );
+    width: 200px;
+    height: 200px;
+    margin: 60px auto;
+    filter: blur(10px) opacity(0.45);
+
+}
+
+#bandera-circulo:hover{
+    background: none;
+    background-color: aqua;
+    filter:none;
+}
+
+.sombra{
+    /** 20px hacia la derecha y 20px hacia abajo */
+    /* box-shadow: -20px -20px; */
+    /* ! 1er parametro: eje X (default derecha) */
+    /* ! 2do parametro: eje Y (default abajo) */
+    /* ! 3er parametro: difuminación de la sombre */
+    /* ! 4to parametro: Se expande o crece 4 en todos los lados. Con negativo, es lo contrario*/
+    /* ! 5to parametro: color */
+    box-shadow: 20px 20px 10px -10px gray;
+}
+
+.sombra-texto{
+    text-shadow: 10px 10px 2px gray;
+}
+
+.bandera{
+    background: url(../images/escudo-peru.jpeg);
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+}

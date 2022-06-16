@@ -1,0 +1,64 @@
+body{
+    background-color: rgb(189, 181, 181);
+}
+
+#contenedor{
+    width: 300px;
+    height: 260px;
+    margin: 100px auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+#campos{
+    padding-top: 20px;
+    text-align: center;
+}
+
+#user{
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#user:focus{
+    height: 40px;
+}
+
+#pass{
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#pass:focus{
+    transform: scale(1.5) translate(20px, 20px);
+}
+
+.form-control{
+    margin-top: 10px;
+}
+
+#submit{
+    height: 30px;
+    width: 90px;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#submit:hover{
+    background-color: white;
+    color: #3b5998;
+    border: solid;
+
+    /* *Reduce a la mitad el tamaño del submit */
+    transform: scale(0.5);
+}
+
+#logo{
+    height: 50px;
+    width: 70px;
+}
