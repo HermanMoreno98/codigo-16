@@ -1,0 +1,98 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+h1{
+    /* ! El em utiliza como base la medida del padre inmediato (en este caso, el body, que es el padre, tiene un font-size de 20px) */
+    /** 2 x 20px = 40px (valor final del tamaño de h1) */
+    /* font-size: 2em; */
+    /** 2 x 10px = 20px (valor del root (html) es de 10px)*/
+    font-size: 2rem;
+}
+
+p{
+    text-align: center;
+    font-weight: bold;
+    /* 1.5 mayor que la medida del padre: body 20px */
+    font-size: 1.5em; 
+
+}
+
+.small {
+    /** 0.6 x 20px = 12px */
+    font-size: 0.6em;
+}
+
+.solid{
+    border-style: solid;
+    border-color: brown;
+    border-width: 10px;
+}
+
+.dashed{
+    border-style: dashed;
+    border-color:rgb(49, 178, 49);
+    border-width: 5px;
+}
+
+.hidden{
+    border-style: hidden;
+}
+
+.dotted{
+    border: 2px dotted pink;
+}
+
+.double{
+    border-style: double;
+    border-color: rgb(21, 21, 201);
+}
+
+.groove{
+    border-style: groove;
+    border-color: purple;
+}
+
+.ridge{
+    border-style: ridge;
+    border-color: rgb(233, 119, 119);
+}
+
+.inset{
+    border-style: inset;
+    border-color: yellow;
+}
+
+.outset{
+    border-style: outset;
+    border-color: aqua;
+}
+
+.left_solid{
+    border-left: solid red 10px;
+}
+
+.right_dotted{
+    border-right: dotted orange 3px;
+}
+
+.top_dashed{
+    border-top: dashed grey 2px;
+}
+
+.bottom_double{
+    border-bottom: double 5px red;
+}
+
+.mix_left_top{
+    /* ! Sentido horario (top right bottom left) */
+    border-style: solid none none dashed;
+    border-width: 1px 0px 0px 1px;
+    border-color: black red red blue;
+}
