@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", sans-serif;
+}
+
+.contenedor{
+    background-color: hsl(212, 45%, 89%);
+    height: 100vh;
+}
+
+.contenedor-interno{
+    width: 375px;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 16px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* *Aplicar el estilo a cada elemento que este dentro de este div */
+.contenedor-interno * {
+    margin-top: 10px;
+}
+
+
+img{
+    width: 345px;
+    border-radius: 16px;
+}
+
+h4{
+    width: 60%;
+    margin: auto;
+}
+
+p{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+    color: rgba(128, 128, 128, 0.609);
+}
