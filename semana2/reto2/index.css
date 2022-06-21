@@ -5,15 +5,15 @@ body{
 }
 
 .contenedor{
-    background-color: hsl(212, 45%, 89%);
+    background-color: hsl(217, 54%, 11%);
     height: 100vh;
 }
 
-.contenedor-interno{
+.contenedor-hijo{
     width: 375px;
-    background-color: #fff;
-    text-align: center;
+    background-color: hsl(216, 50%, 16%);
     padding: 10px;
+    text-align: center;
     border-radius: 16px;
     margin: auto;
     position: relative;
@@ -21,26 +21,35 @@ body{
     transform: translateY(-50%);
 }
 
-/* *Aplicar el estilo a cada elemento que este dentro de este div */
-.contenedor-interno * {
-    margin-top: 10px;
+.contenedor-hijo-2{
+    padding: 15px;
 }
 
-
-img{
+.imagen-principal{
     width: 345px;
     border-radius: 16px;
 }
 
+.icono{
+    width: 50px;
+}
+
 h4{
-    width: 60%;
-    margin: 0;
+    color: hsl(0, 0%, 100%);
+    text-align: left;
 }
 
 p{
     width: 70%;
     margin: auto;
-    margin-bottom: 20px;
-    color: rgba(128, 128, 128, 0.609);
+    color: hsl(215, 51%, 70%);
     text-align: left;
+}
+
+.text-eth{
+    color: hsl(178, 100%, 50%);
+}
+
+span{
+    color: hsl(0, 0%, 100%);
 }
