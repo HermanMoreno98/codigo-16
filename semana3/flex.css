@@ -1,0 +1,57 @@
+.container{
+    /* Para que ocupe todo el ancho y alto de la pantalla */
+    display: flex;
+    height: 50vh;
+    border: solid 3px;
+    /* *alinea los elementos de forma horizontal */
+    /* *flex-start: alinea los elementos a la izquierda */
+    /* *flex-center: alinea los elementos al centro */
+    /* *flex-end: alinea los elementos a la derecha */
+    /* *space-between: alinea los elementos de extremo a extremo, manteniendo un espacio idéntico */
+    /* *space-around: igual que between, con la excepcion que mantiene espacios a los extremos */
+    /* *space-evenly: igual que around, pero genera mas espacios a los extremos */
+    justify-content: space-evenly;
+
+    /* *La propiedad que se encarga de alinear elementos de forma certical es flex-items*/
+    /* !Se basa en la altura del elemento. Si un elemento no tiene altura, no va a poder centrarlo */
+    align-items: center;
+
+    /* *Flex tbn permite controlar la direccion de los elementos */
+    /* *Column: transforma la direccion de los elementos en columnas */
+    /* !Nota: por default, la propiedad de los hijos es row */
+    flex-direction: column;
+}
+
+.container div{
+    border: solid red 3px;
+    height: 300px;
+    width: 24%;
+}
+
+.container-2{
+    display: flex;
+    height: 100vh;
+    border: solid green 3px;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.container-2 div{
+    height: 300px;
+    width: 20%;
+    border: solid orange 3px;
+}
+
+.container-3{
+    display: flex;
+    height: 100vh;
+    border: solid purple 3px;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+}
+
+.container-3 div{
+    height: 300px;
+    width: 20%;
+    border: solid green 3px;
+}
