@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .red{
+            color: red;
+        }
+        .red-1{
+            color: rgb(255, 77, 0);
+        }
+        .red-2{
+            color: rgb(255, 132, 0);
+        }
+        .red-3{
+            color: rgb(255, 200, 0);
+        }
+        .red-4{
+            color: rgb(242, 255, 0);
+        }
+        .blue{
+            color:blue;
+        }
+        .brown{
+            color: brown;
+        }
+        .green{
+            color: green;
+        }
+        .light-blue{
+            color: lightblue;
+        }
+    </style>
+    <title>JS - Condicionales</title>
+</head>
+<body>
+    <h1>Martes 21 Junio</h1>
+    <h2>Condicionales + document.write()</h2>
+    <hr>
+
+</body>
+<script type="text/javascript">
+    document.write("<h3>Notas</h3>");
+
+    let nota = -1;
+    //nota = Number(prompt("Ingrese un numero")); //nota de un alunno
+    let estado = "Nota incorrecta";
+    let color = 'red';
+
+    // //// Evalua si un valor no es un número
+    // while(isNaN(nota)){
+    //     alert("Solo debe ingresar numeros");
+    //     nota = Number(prompt("Ingrese un numero"));
+    // }
+
+    if(nota<11 && nota>0){
+        estado = "Desaprobado";
+        color = 'red';
+    } else if (nota>=11 && nota<=20){
+        estado = "Aprobado";
+        color = 'blue';
+    }
+
+    if(estado != "Nota incorrecta"){
+        document.write("<p class="+color+">"+nota+"</p>");
+        document.write("<p class="+color+">"+estado+"</p>");
+    } else {
+        document.write("<p class='red'>La nota que ingresó es incorrecta, vuelva a intentarlo</p>");
+    }
+
+    
+
+    document.write("<hr>");
+
+    // Angulos
+    document.write("<h3>Angulo</h3>");
+    let angulo = 10;
+    let clasificacion = "Angulo inexistente";
+
+    if(angulo == 0){
+        clasificacion = "Nulo";
+    } else if (angulo > 0 && angulo < 90){
+        clasificacion = "Agudo";
+    } else if (angulo == 90){
+        clasificacion = "Recto";
+    } else if (angulo > 90 && angulo < 180){
+        clasificacion = "Obtuso";
+    } else if (angulo == 180){
+        clasificacion = "Llano";
+    } else if (angulo > 180 && angulo <360){
+        clasificacion = "Cóncavo";
+    } else if (angulo == 360){
+        clasificacion = "Completo"
+    }
+
+    if(clasificacion != "Angulo inexistente"){
+        document.write("<p>El angulo es "+angulo+"° y es de tipo "+clasificacion+"</p>");
+    } else {
+        document.write("<p class='red'>El angulo que ingresó es incorrecto, vuelva a intentarlo</p>");
+    }
+
+
+    document.write("<hr>");
+
+    // Temperatura
+    // let temperatura = Number(prompt("Ingrese la temperatura actual"));
+    let temperatura = 10;
+    let mensaje;
+    let colorTemperatura;
+
+    // while(isNaN(temperatura)){
+    //     alert("Ingrese un numero porfavor");
+    //     temperatura = Number(prompt("Ingrese la temperatura actual"));
+    // }
+
+    if(temperatura <= 10){
+        mensaje = "Clima Frio";
+        color = 'blue';
+    } else if (temperatura >= 11 && temperatura >= 16){
+        mensaje = "Clima Templado";
+        color = 'light-blue';
+    } else if (temperatura >= 17 && temperatura <= 24){
+        mensaje = "Clima Cálido";
+        color = 'brown';
+    } else {
+        mensaje = "Clima tropical";
+        color = 'green';
+    }
+
+    document.write("<p class="+color+">"+mensaje+"</p>");
+
+    // document.body.style.backgroundColor = 'red';
+    // document.getElementsByTagName("h1")[0].innerText = "Paul Moreno";
+
+
+    document.write("<hr>");
+    document.write("<h3>Reto</h3>")
+
+    // Reto
+    let nombre = prompt("Ingrese su nombre");
+    let sexo = prompt("Ingrese su sexo (Hombre o Mujer)");
+    let edad = Number(prompt("Ingrese su edad"));
+    let notaAlumno = Number(prompt("Ingrese su nota"));
+    let mensajeAlumno;
+    let mensajeNota;
+    let colorAlumno;
+    
+    if(sexo === "Hombre" && edad > 35){
+        mensajeAlumno = "El Sr.";
+    } else if (sexo === "Hombre" && edad < 35){
+        mensajeAlumno = "El Joven";
+    } else if (sexo === "Mujer" && edad < 50){
+        mensajeAlumno = "La Sra.";
+    } else if (sexo === "Mujer" && edad < 50){
+        mensajeAlumno = "La Srta.";
+    }
+
+    if(notaAlumno >= 0 && notaAlumno <=3){
+        mensajeNota = "Muy deficiente";
+        colorAlumno = 'red';
+    } else if (notaAlumno > 3 && notaAlumno <=5){
+        mensajeNota = "Insuficiente";
+        colorAlumno = 'red-1';
+
+    } else if (notaAlumno >5 && notaAlumno <= 6){
+        mensajeNota = "Suficiente";
+        colorAlumno = 'red-2';
+    } else if (notaAlumno > 6 && notaAlumno <=7){
+        mensajeNota = "Bien";
+        colorAlumno = 'red-3';
+    } else if (notaAlumno > 7 && notaAlumno <= 9){
+        mensajeNota = "Notable";
+        colorAlumno = 'red-4';
+    } else if (notaAlumno > 9 && notaAlumno <= 10){
+        mensajeNota = "Sobresaliente"
+        colorAlumno = 'green';
+    }
+
+
+    document.write("<p>"+mensajeAlumno+" "+nombre+" ("+edad+" años)"+" tiene "+"<span class="+colorAlumno+">"+notaAlumno+"</span>"+" de nota. Por ende, es "+"<span class="+colorAlumno+">"+mensajeNota+"</span>"+"."+"</p>");
+
+</script>
+</html>

@@ -39,3 +39,4 @@ console.log("El area del rectangulo es",areaRectangulo);
 const radio = Number(prompt("Ingresar el radio del circulo"));
 const areaCirculo = Math.PI * Math.pow(radio,2);
 console.log("El area del circulo es",areaCirculo);
+
