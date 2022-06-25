@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #container {
+        width: 300px;
+        min-height: 100px;
+        background-color: #ddd;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding: 10px;
+      }
+    </style>
+    <title>Bucles</title>
+  </head>
+  <body>
+    <div id="container"></div>
+  </body>
+  <script>
+    const div_container = document.getElementById('container');
+    div_container.innerHTML = "<h1>Ejercicios Bucles</h1>"
+
+    // Facotirial
+    const factor = 6;
+    div_container.innerHTML += "<h2>Factorial de "+factor+"</h2>"
+    let resultado = 1;
+
+    for (let i = 1; i <= factor; i++){
+        resultado *= i;
+    }
+
+    div_container.innerHTML += "<p>Resultado: "+resultado+"</p>"
+    div_container.innerHTML += "<hr>"
+
+    // Suma de numeros positivos de 2 cifras que terminan en 7:
+    
+    let resultadoNumPos = 0;
+    for (let i = 10; i < 100; i++){
+        if((i - 7) % 10 === 0){
+            resultadoNumPos += i
+        }
+    }
+    div_container.innerHTML += "<h2>Resultado de numeros positivos de 2 cifras que terminan en 7 </h2>"
+    div_container.innerHTML += "<p>Resultado: "+resultadoNumPos+"</p>"
+    div_container.innerHTML += "<hr>"
+
+    // Numeros primos
+    div_container.innerHTML += "<h2>Números primos</h2>"
+    const cantidad_primos = 200;
+    let numeros_primos = []
+
+    for (let i = 1; i<= cantidad_primos; i++){
+        if(esPrimo(i) == true) numeros_primos.push(i);
+    }
+
+    for (let num of numeros_primos){
+        if(numeros_primos.indexOf(num) === 25) break;
+        div_container.innerHTML += num + " - ";
+    }
+    
+    function esPrimo(numPrimo){
+        let cont = 0;
+        let siEsPrimo = false;
+        for (let i = 1; i <= numPrimo; i++){
+            if(numPrimo % i === 0){
+                cont += 1;
+            }
+        }
+        if(cont === 2) siEsPrimo = true;
+        return siEsPrimo;
+    }
+  </script>
+</html>
