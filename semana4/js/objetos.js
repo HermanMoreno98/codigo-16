@@ -1,49 +1,86 @@
 // container
 const div_container = document.querySelector("#container");
+let carros = [];
+const numCarros = 10;
 
-class User {
 
-    static cantidad; //NO se llama con this, sino con statis
+class Carro {
 
-    constructor(_first_name, _last_name){
-        User.cantidad++;
-        this.id = User.cantidad;
-        this.first_name = _first_name;
-        this.last_name = _last_name;
+    // Sirve para darle valor a los atributos del objeto carro (que aún no se crea)
+    constructor(_color, _velocidad){
+        this.color = _color;
+        this.velocidad = _velocidad;
     }
 
-    // Propiedad calculada: fullName
-
-    get fullName(){
-        return this.first_name + " " + this.last_name;
+    // Setter
+    setColor(_nuevo_color){
+        this.color = String(_nuevo_color).toLowerCase();
     }
 
-    set fullName(_fullname){
-        this.first_name = _fullname.split(" ")[0];
-        this.last_name = _fullname.split(" ")[1];
+    // Getter
+    getColor(){
+        return this.color;
     }
 
-    static getCantidad(){
-        return User.cantidad;
+    getVelicidad(){
+        return this.velocidad + " km/h";
+    }
+
+    presentacion(){
+        const texto = "Hola, soy un carro de color " + this.color + " y tengo una velicidad de " + this.velocidad + " Km/h";
+        return texto;
+    }
+
+}
+
+let crearCarros = () => {
+    const colorDefined = 'NEGRO'
+    for (let i = 1; i <= numCarros; i++){
+        carros.push(new Carro(colorDefined, Math.round(Math.random()*100)));
     }
 }
 
-const u1 = new User("Bruno","Diaz");
-const u2 = new User("Lindes","Hass");
-const u3 = new User("Jaime","Farfan");
-const u4 = new User("Paul","Moreno");
-const u5 = new User("Juan","Perez");
-const u6 = new User(); // Creando un objeto vacío
 
-// Seteando
-u6.fullName = "Carlos Anderzon";
+// div_container.innerHTML += "<p>" + carro_1.presentacion() + "</p>";
+// div_container.innerHTML += "<hr>";
+// div_container.innerHTML += "<p>" + carro_verde.presentacion() + "</p>";
 
-div_container.innerHTML += "<p>" + u1.fullName + "<p>";
-div_container.innerHTML += "<hr>";
-div_container.innerHTML += "<p>" + u2.fullName + "<p>";
-div_container.innerHTML += "<hr>";
-div_container.innerHTML += "<p>" + u6.fullName + "<p>";
-div_container.innerHTML += "<hr>";
+let imprimir = () => {
+    crearCarros()
+    for (let car of carros){
+        car.setColor('ROJO');
+        div_container.innerHTML += "<p>" + car.presentacion() + "</p>";
+        div_container.innerHTML += "<hr>"
+        console.log(car.getVelicidad());
+    }
+}
 
-console.log(User.getCantidad()); // No funciona porque es static
-console.log(u2.fullName);
+let reset = () => {
+    carros = [];
+    div_container.innerHTML = "";
+}
+
+class Cuadrado {
+
+    constructor (_lado){
+        this.lado = _lado;
+    }
+
+    set setLado(_nuevo_lado){
+        this.lado = _nuevo_lado;
+    }
+
+    get getLado(){
+        return this.lado;
+    }
+
+    get calcularArea(){
+        return Math.pow(this.lado,2) + " m2."
+    }
+}
+
+const c1 = new Cuadrado(4);
+c1.setLado = 7;
+console.log(c1.calcularArea);
+console.log(c1.getLado);
+
