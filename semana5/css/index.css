@@ -18,19 +18,39 @@
   #input-search {
     padding: 8px;
     width: 300px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+ 
+  }
+
+  .icono {
+    text-align: center;
+  }
+
+  .icono::placeholder{
+    font-family: "Font Awesome 5 Free"; font-weight: 900;
   }
 
   .btn {
-    border: solid rgb(12, 145, 101);
     padding: 8px;
-    background-color: rgb(12, 145, 101);
     width: 120px;
     border-radius: 4px;
     color: #fff;
     font-size: 1em;
     font-weight: bold;
   }
-  
+
+  #btn-search {
+    border: solid rgb(12, 145, 101);
+    background-color: rgb(12, 145, 101);
+  }
+
+  #btn-clean{
+    border: solid red;
+    background-color: red;
+  }
+
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -92,5 +112,42 @@
     .card {
       width: 100%;
     }
+
+    .section-button{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #input-search{
+      width: 90.4%;
+      margin-top: 8px;
+    }
+
+    .btn{
+      width: 93.5%;
+      margin-top: 8px;
+    }
     
   }
+
+  @media only screen and (min-width: 601px){
+    .card {
+      width: 40%;
+    }
+
+    img{
+      width: 200px;
+    }
+  }
+
+  @media only screen and (min-width: 900px){
+    .card{
+      width: 25%;
+    }
+  }
+
+
+
+
+  
